@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        table,tr,th,td{
+        border: 2px solid black;
+        }
+        table{
+        border-collapse: collapse;
+        height: 100vh;
+        width: 90%;
+        }
+
+        th,td{
+        height: 40px;
+        width: 100px;
+        text-align: justify;
+        font-size: large;
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            background-color: aqua;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function search() {
+            console.log('Function started');
+            name=document.getElementById('searchName').value.toUpperCase();
+            console.log(name);
+            row=document.getElementsByTagName('tr');
+            console.log(row);
+
+            for(i=1;i<row.length;i++){
+            data=row[i].getElementsByTagName('td')[0].innerHTML.toUpperCase();
+            // console.log(data.indexOf(name));
+            //  console.log(data);
+            // if(name==data){
+            //     console.log('found match');
+                // console.log(name.indexOf(data));
+            // }
+            if(data.indexOf(name)>-1){
+                row[i].style.display=" ";
+            }
+            else{
+                row[i].style.display="none";
+
+            }
+            
+            
+            }
+            
+            
+            
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Search Below For Details</h1> <br>
+    <input type="text"  onkeyup="search()" id="searchName"> <br> <br>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Degree</th>
+            <th>Profession</th> 
+        </tr>
+        <tr>
+            <td>A S Premraj</td>
+            <td>BE</td>
+            <td>FullStack</td>
+        </tr>
+        <tr>
+            <td>AbhinandanP</td>
+            <td>BE</td>
+            <td>JFSJD</td>
+        </tr>
+        <tr>
+            <td>Ankith Kumar</td>
+            <td>BSC</td>
+            <td>FullStack</td>
+        </tr>
+        <tr>
+            <td>B N Madhu</td>
+            <td>BCOM</td>
+            <td>SYSTEM ADMIN</td>
+
+        </tr>
+        <tr>
+            <td>Chandana N</td>
+            <td>BE</td>
+            <td>FullStack</td>
+
+        </tr>
+        <tr>
+            <td>Chandrashekar A E</td>
+            <td>BE</td>
+            <td>FullStack</td>
+
+        </tr>
+        <tr>
+            <td>Manoj G</td>
+            <td>BE</td>
+            <td>JFSJD</td>
+
+        </tr>
+        <tr>
+            <td>Manoj Kumar R</td>
+            <td>BE</td>
+            <td>JFSJD</td>
+
+        </tr>
+        <tr>
+            <td>Pavan G R</td>
+            <td>BE</td>
+            <td>JFSJD</td>
+        </tr>
+        <tr>
+            <td>Ratan V Jannu</td>
+            <td>BE</td>
+            <td>JFSJD</td>
+        </tr>
+        <tr>
+            <td>Rebecca S</td>
+            <td>BE</td>
+            <td>JFSJD</td>
+        </tr>
+        <tr>
+            <td>Samyuktha S</td>
+            <td>BE</td>
+            <td>JFSJD</td>
+        </tr>
+        <tr>
+            <td>Sandhya P</td>
+            <td>MCA</td>
+            <td>JFSJD</td>
+
+        </tr>
+        <tr>
+            <td>Sanjeeva S Patil</td>
+            <td>BE</td>
+            <td>SYSTEM ADMIN</td>
+        </tr>
+        <tr>
+            <td>Shalini V</td>
+            <td>BIOTECHNOLOGY</td>
+            <td>SYSTEM ADMIN</td>
+        </tr>
+        <tr>
+            <td>Shashank K</td>
+            <td>MCA</td>
+            <td>SYSTEM ADMIN</td>
+        </tr>
+        <tr>
+            <td>Shwetha</td>
+            <td>BCA</td>
+            <td>SYSTEM ADMIN</td>
+        </tr>
+        <tr>
+            <td>Sneha Aparna</td>
+            <td>BE</td>
+            <td>SYSTEM ADMIN</td>
+        </tr>
+    </table>
+</body>
+</html>
